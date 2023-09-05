@@ -1,6 +1,6 @@
 html {
-    font-family: Palanquin,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    
+    font-family: Palanquin, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
 }
 
 body {
@@ -12,23 +12,35 @@ body {
 
 }
 
-.navbar {
-    
-    width: auto;
-    height: 80px;
+.full-name {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 16px;
+    font-size: 30px;
+
 }
-.navbar a, .footer a {
-    font-style: normal;
-    color: #d4d4d4;
-    text-decoration: none;
-    padding: 0px 100px;
-    
+
+.navbar {
+
+    width: 100%;
+    height: 80px;
+    display: flex;
 }
 
 .navbar a {
-    font-size: 30px;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 100px;
+    text-align: left;
     font-weight: 600;
-    
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+.navbar h3 {
+    padding-left: 20px;
+    font-size: 25px;
 }
 
 .footer a {
@@ -36,14 +48,17 @@ body {
     font-weight: 600;
 }
 
-.navbar a:hover, .footer a:hover {
-    color: white;
+.navbar a:hover,
+.footer a:hover {
+    color: #d4d4d4;
 }
 
 
-.navbar-links, .footer-links {
-    text-align: center;
-    
+.navbar-links,
+.footer-links {
+    text-align: right;
+    padding-right: 0;
+
 }
 
 .material-icons {
@@ -54,14 +69,15 @@ body {
 }
 
 .top-block {
-    
+
     width: auto;
-    height: 350px;
+    height: auto;
 }
+
 .btm-block {
-    
+
     width: auto;
-    height: 350px;
+    height: auto;
 }
 
 .footer {
@@ -73,3 +89,121 @@ body {
     position: fixed;
 }
 
+
+
+.navbar ul {
+    flex: 1;
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 100px;
+
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+
+
+
+}
+
+.navbar ul li a {
+    padding-left: 0;
+    padding-right: 20px;
+
+}
+
+.center-top-items {
+    display: flex;
+    justify-content: center;
+
+}
+
+.profile-img {
+    height: 400px;
+    width: 400px;
+    border-radius: 75% 25% 60% 40% / 24% 57% 43% 76%;
+    filter: grayscale(1);
+    background-color: white;
+    margin-right: 30px;
+
+}
+
+h1,
+h2,
+h3 {
+    color: white;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: #00334E;
+    border-radius: 28px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-btn:hover {
+    background-color: #d4d4d4;
+}
+
+hr {
+    margin-top: 40px;
+    width: 70%;
+
+}
+
+.about-block,
+.project-block {
+    text-align: center;
+}
+
+.about-block h3{
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.about-block p {
+    color: #00334E;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+
+.project {
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px 20px 0 20px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #00334E;
+}
+
+.projectblk-title {
+    font-size: 30px;
+    margin-top: 40px;
+}
