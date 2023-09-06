@@ -158,6 +158,8 @@ h1 {
 hr {
     margin-top: 400px;
     width: 70%;
+    border: 1px solid white;
+   
 
 }
 
@@ -192,6 +194,7 @@ hr {
     width: 200px;
     height: 200px;
     margin: 20px 20px 0 20px;
+    box-shadow: rgba(0, 0, 0, 1) 0px 25px 20px -20px;
 }
 
 .project-list {

@@ -29,7 +29,7 @@
                     </span> <br><br>Software Developer
                 </h1>
 
-                <button class="contact-btn">
+                <button class="contact-btn" onclick="scrollToContact()">
                     Contact
                 </button>
 
@@ -71,7 +71,7 @@
         </div>
         <hr class="contact-hr">
 
-        <div class="contact-block">
+        <div id="contact" class="contact-block">
             
             <form onsubmit="sendEmail(); reset(); return false;">
                 <h3>Contact Me</h3>
@@ -104,7 +104,7 @@
         function sendEmail() {
             Email.send({
                 // Grab secure token from smptp js website
-                
+
                 To : 'nathan.carney99@gmail.com',
                 From : document.getElementById("email").value,
                 Subject : "New Portfolio Website Message",
@@ -116,6 +116,15 @@
             }).then(
             message => alert("Message Sent Successfully")
             );
+        }
+    </script>
+    <script>
+        function scrollToContact() {
+            // Get a reference to the contact block element using its ID
+            var contactBlock = document.getElementById("contact");
+    
+            // Use the `scrollIntoView` method to scroll to the contact block smoothly
+            contactBlock.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
