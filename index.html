@@ -69,38 +69,52 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr class="contact-hr">
+
+        <div class="contact-block">
+            
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>Contact Me</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message"  rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
 
 
-        <div class="resume-block">
-            <h3>Resume</h3>
-            <div class="center-resume-img">
-                <div class="resume-desc">
-                    <h3>
-                        Download a current version of my Resume!
-                    </h3>
-                    <div class="center-dwnld-btn">
 
-                        <button class="resume-dwnld">Download</button>
-                    </div>
-                </div>
-
-                <img src="images/NathanCarneyResume-1.png" class="resume-img">
-
-            </div>
         </div>
 
 
-    </div>
+        
 
 
     </div>
 
-    <!-- <div class="footer">
+
+    </div>
+
+    <div class="footer">
 
 
-    </div> -->
-
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js" ></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "",
+                Password : "password",
+                To : 'them@website.com',
+                From : "you@isp.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>
