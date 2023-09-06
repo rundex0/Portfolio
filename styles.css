@@ -139,7 +139,7 @@ h1 {
     font-size: 60px;
 }
 
-.contact-btn {
+.contact-btn, .resume-dwnld {
     text-decoration: none;
     color: #00334E;
     border-radius: 28px;
@@ -150,7 +150,7 @@ h1 {
     font-weight: 600;
 }
 
-.contact-btn:hover {
+.contact-btn:hover, .resume-dwnld:hover {
     background-color: #d4d4d4;
 }
 
@@ -203,7 +203,36 @@ hr {
     color: #00334E;
 }
 
-.projectblk-title {
-    font-size: 30px;
+.projectblk-title, .resume-block h3{
+    font-size: 40px;
     margin-top: 40px;
+    text-align: center;
 }
+
+.resume-img {
+    width: 30%;
+    height: auto;
+    border: 10px rgb(131, 230, 255) solid;
+    border-radius: 20px;
+}
+
+.center-resume-img {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 140px;
+}
+
+
+
+.resume-desc {
+    width: 400px;
+    height: 200px;
+    padding-right: 40px;
+}
+
+.center-dwnld-btn {
+    display: flex;
+    justify-content: center;
+}
+
