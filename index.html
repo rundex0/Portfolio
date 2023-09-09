@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan's Portfolio</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <!-- Link to Google Fonts Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <div class="navbar">
         <h3>Nathan</h3>
         <ul>
@@ -18,106 +21,92 @@
         </ul>
     </div>
 
+    <!-- Top Block -->
     <div class="top-block">
-
         <div class="center-top-items">
+            <!-- Profile Image -->
             <img src="./images/Nathan-PhotoRoom (1).png" class="profile-img" />
             <div class="intro-txt">
                 <h1>
-                    Hi,<br>I'm <span style="color: rgb(131, 230, 255);">
-                        Nathan
-                    </span> <br><br>Software Developer
+                    Hi,<br>I'm <span style="color: rgb(131, 230, 255);">Nathan</span> <br><br>Software Developer
                 </h1>
-
-                <button class="contact-btn" onclick="scrollToContact()">
-                    Contact
-                </button>
-
+                <!-- Contact Button -->
+                <button class="contact-btn" onclick="scrollToContact()">Contact</button>
             </div>
-
         </div>
-
     </div>
+
     <div class="btm-block">
         <hr>
 
+        <!-- About Me Section -->
         <div class="about-block">
             <h3>About Me</h3>
-            <p>I'm a Computer Science student at UCF who is
-                passionate about coding and problem-solving.
-                Seeking an internship to apply my skills, learn,
-                and contribute. Beyond studies, I love running,
-                reading, and competing in races. Ready
-                to bring my dedication to your team.
+            <p>I'm a Computer Science student at UCF who is passionate about coding and problem-solving.
+                Seeking an internship to apply my skills, learn, and contribute. Beyond studies, I love running,
+                reading, and competing in races. Ready to bring my dedication to your team.
                 <br><br>
                 Thank you for visiting my portfolio!
             </p>
         </div>
 
+        <!-- Personal Projects Section -->
         <div class="project-block">
-
             <h3 class="projectblk-title">Personal Projects</h3>
             <div class="project-list">
+                <!-- Project Items -->
                 <div class="project">
-                    <h3 class="project-title">example</h1>
+                    <h3 class="project-title">example</h3>
                 </div>
                 <div class="project">
-                    <h3 class="project-title">example</h1>
+                    <h3 class="project-title">example</h3>
                 </div>
                 <div class="project">
-                    <h3 class="project-title">example</h1>
+                    <h3 class="project-title">example</h3>
                 </div>
             </div>
         </div>
         <hr class="contact-hr">
 
+        <!-- Contact Section -->
         <div id="contact" class="contact-block">
-            
             <form onsubmit="sendEmail(); reset(); return false;">
                 <h3>Contact Me</h3>
+                <!-- Input Fields -->
                 <input type="text" id="name" placeholder="Your Name" required>
                 <input type="email" id="email" placeholder="Your Email" required>
                 <input type="text" id="phone" placeholder="Your Phone Number" required>
-                <textarea id="message"  rows="4" placeholder="Your Message"></textarea>
+                <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+                <!-- Send Button -->
                 <button type="submit">Send</button>
             </form>
-
-
-
         </div>
-
-
-        
-
-
     </div>
 
+    <!-- Footer (empty for now) -->
+    <div class="footer"></div>
 
-    </div>
-
-    <div class="footer">
-
-
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js" ></script>
+    <!-- External JavaScript Library for Sending Emails -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- JavaScript Function to Send Email -->
     <script>
         function sendEmail() {
             Email.send({
-                // Grab secure token from smptp js website
-
-                To : 'nathan.carney99@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New Portfolio Website Message",
-                Body : "Name: " + document.getElementById("name").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Phone no: " + document.getElementById("phone").value 
-                + "<br> Message: " + document.getElementById("message").value
-
+                // Replace with a secure token from smtpjs.com
+                To: 'nathan.carney99@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Portfolio Website Message",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br> Email: " + document.getElementById("email").value +
+                    "<br> Phone no: " + document.getElementById("phone").value +
+                    "<br> Message: " + document.getElementById("message").value
             }).then(
-            message => alert("Message Sent Successfully")
+                message => alert("Message Sent Successfully")
             );
         }
     </script>
+
+    <!-- JavaScript Function to Scroll to the Contact Section -->
     <script>
         function scrollToContact() {
             // Get a reference to the contact block element using its ID
